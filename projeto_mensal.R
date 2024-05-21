@@ -1,4 +1,7 @@
+install.packages("here")
+
 library(read.dbc)
+library(here)
 library(dplyr)
 library(ggplot2)
 library(stats)
@@ -7,7 +10,16 @@ library(gapminder)
 municipios <- read.csv("data/municipios.csv")
 municipios <- municipios %>% mutate(MUNICIPIO = as.character(substring(COD, 1, 6)))
 
-df <- read.dbc("data/RDPR2401.dbc")
+diretorio <- here("data/RD/")
+files <- list.files(diretorio, pattern = "\\.dbc$", full.names = TRUE)
+
+read_dbc_file <- function(file) {
+  read.dbc(file)
+}
+
+# Use lapply para ler todos os arquivos e combine com do.call e rbind
+all_data <- do.call(rbind, lapply(files, read_dbc_file))
+
 
 summary(df$RACA_COR)
 
