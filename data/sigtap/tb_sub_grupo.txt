@@ -1,0 +1,64 @@
+0401Pequenas cirurgias e cirurgias de pele, tecido subcutâneo e mucosa                                  202405
+0801Ações relacionadas ao estabelecimento                                                               202405
+0201Coleta de material                                                                                  202405
+0701Órteses, próteses e materiais especiais não relacionados ao ato cirúrgico                           202405
+0901Atenção em Oncologia                                                                                202405
+0101Ações coletivas/individuais em saúde                                                                202405
+0301Consultas / Atendimentos / Acompanhamentos                                                          202405
+0501Coleta e exames para fins de doação de orgãos, tecidos e células e de transplante                   202405
+0601Medicamentos de dispensação excepcional                                                             202405
+0702Órteses, próteses e materiais especiais relacionados ao ato cirúrgico                               202405
+0802Ações relacionadas ao atendimento                                                                   202405
+0902Atenção em Cardiologia                                                                              202405
+0202Diagnóstico em laboratório clínico                                                                  202405
+0402Cirurgia de glândulas endócrinas                                                                    202405
+0502Avaliação de morte encefálica                                                                       202405
+0102Vigilância em saúde                                                                                 202405
+0302Fisioterapia                                                                                        202405
+0602Medicamentos estratégicos                                                                           202405
+0303Tratamentos clínicos (outras especialidades)                                                        202405
+0403Cirurgia do sistema nervoso central e periférico                                                    202405
+0503Ações relacionadas à doação de orgãos e tecidos para transplante                                    202405
+0903Atenção em Ortopedia                                                                                202405
+0203Diagnóstico por anatomia patológica e citopatologia                                                 202405
+0603Medicamentos de âmbito hospitalar e urgência                                                        202405
+0803Autorização / regulação                                                                             202405
+0304Tratamento em oncologia                                                                             202405
+0204Diagnóstico por radiologia                                                                          202405
+0904Atenção em Otorrinolaringologia                                                                     202405
+0604Componente especializado da assistência farmacêutica                                                202405
+0504Processamento de tecidos para transplante                                                           202405
+0404Cirurgia das vias aéreas superiores, da face, da cabeça e do pescoço                                202405
+0305Tratamento em nefrologia                                                                            202405
+0205Diagnóstico por ultrasonografia                                                                     202405
+0505Transplante de orgãos, tecidos e células                                                            202405
+0905Atenção em Oftalmologia                                                                             202405
+0405Cirurgia do aparelho da visão                                                                       202405
+0506Acompanhamento e intercorrências no pré e pós-transplante                                           202405
+0306Hemoterapia                                                                                         202405
+0206Diagnóstico por tomografia                                                                          202405
+0406Cirurgia do aparelho circulatório                                                                   202405
+0407Cirurgia do aparelho digestivo, orgãos anexos e parede abdominal                                    202405
+0207Diagnóstico por ressonância magnética                                                               202405
+0307Tratamentos odontológicos                                                                           202405
+0408Cirurgia do sistema osteomuscular                                                                   202405
+0308Tratamento de lesões, envenenamentos e outros, decorrentes de causas externas                       202405
+0208Diagnóstico por medicina nuclear in vivo                                                            202405
+0409Cirurgia do aparelho geniturinário                                                                  202405
+0309Terapias especializadas                                                                             202405
+0209Diagnóstico por endoscopia                                                                          202405
+0410Cirurgia de mama                                                                                    202405
+0310Parto e nascimento                                                                                  202405
+0210Diagnóstico por radiologia intervencionista                                                         202405
+0411Cirurgia obstétrica                                                                                 202405
+0211Métodos diagnósticos em especialidades                                                              202405
+0212Diagnóstico e procedimentos especiais em hemoterapia                                                202405
+0412Cirurgia torácica                                                                                   202405
+0213Diagnóstico em vigilância epidemiológica e ambiental                                                202405
+0413Cirurgia reparadora                                                                                 202405
+0214Diagnóstico por teste rápido                                                                        202405
+0414Bucomaxilofacial                                                                                    202405
+0415Outras cirurgias                                                                                    202405
+0416Cirurgia em oncologia                                                                               202405
+0417Anestesiologia                                                                                      202405
+0418Cirurgia em nefrologia                                                                              202405

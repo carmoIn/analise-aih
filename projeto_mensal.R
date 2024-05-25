@@ -9,10 +9,13 @@ library(ggplot2)
 library(stats)
 library(gapminder)
 library(tidyr)
+library(gdata)
 
 # Carregar e preparar os dados
 municipios <- read.csv("data/municipios.csv")
 municipios <- municipios %>% mutate(MUNICIPIO = as.character(substring(COD, 1, 6)))
+
+procedimentos <- read.csv("data/sigtap/procedimentos.csv", colClasses = 'character')
 
 diretorio <- here("data/RD/")
 files <- list.files(diretorio, pattern = "\\.dbc$", full.names = TRUE)
@@ -41,7 +44,9 @@ df <- df %>% mutate(
 )
 
 # Mesclar com dados de municípios
-df <- left_join(df, municipios, by = c("MUNIC_RES" = "MUNICIPIO"))
+df <- inner_join(df, municipios, by = c("MUNIC_RES" = "MUNICIPIO"))
+
+df <- inner_join(df, procedimentos, by = c("PROC_REA" = "co_procedimento"))
 
 # Certificar-se de que VAL_TOT é numérico
 df$VAL_TOT <- as.numeric(df$VAL_TOT)
@@ -51,7 +56,7 @@ mean_val_tot_geral <- mean(df$VAL_TOT, na.rm = TRUE)
 median_val_tot_geral <- median(df$VAL_TOT, na.rm = TRUE)
 
 media_por_sexo <- df %>% group_by(SEXO) %>% summarise(media_val_tot = mean(VAL_TOT, na.rm = TRUE))
-median_por_sexo <- df %>% group_by(SEXO) %>% summarise(median_val_tot = median(VAL_TOT, na.rm = TRUE))
+ <- df %>% group_by(SEXO) %>% summarise(median_val_tot = median(VAL_TOT, na.rm = TRUE))
 
 # Transformar SEXO em numérico
 df <- df %>%
@@ -256,3 +261,31 @@ ggplot(mortalidade_contagem, aes(x = DESLOCADO, y = Morte, fill = DESLOCADO)) +
     legend.position = "none"
   ) +
   scale_fill_brewer(palette = "Set3")
+
+obitos_pacientes <- df %>% filter(MORTE == 'Sim')
+top_10_procedimentos <- obitos_pacientes %>% group_by(no_procedimento) %>%  summarise(count = n()) %>% arrange(desc(count))
+
+top_10_procedimentos <- top_10_procedimentos %>% head(10)
+
+
+ggplot(top_10_procedimentos, aes(x = reorder(trimws(no_procedimento), count), y = count, fill = no_procedimento)) +
+  geom_bar(stat = "identity", color = "black") +
+  geom_text(aes(label = count), hjust = -0.1, color = "black", size = 3.5) +
+  labs(
+    title = "10 Procedimentos com Maior Número de Óbitos",
+    x = "Procedimentos Realizados",
+    y = "Número de Valores Nulos",
+    fill = "Variável"
+  ) +
+  theme_minimal(base_size = 15) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 20, face = "bold"),
+    axis.text.x = element_text(size = 12),
+    axis.text.y = element_text(size = 12),
+    axis.title.x = element_text(size = 15),
+    axis.title.y = element_text(size = 15),
+    legend.position = "none"
+  ) +
+  scale_fill_brewer(palette = "Set3") +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1)))
